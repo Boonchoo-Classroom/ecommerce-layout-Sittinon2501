@@ -1,9 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Home -->
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
             android:title="Home" />
+    </group>
+
+    <!-- Product List -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_product_list"
+            android:icon="@drawable/baseline_add_business_24"
+            android:title="Product List" />
+    </group>
+
+    <!-- Shopping Cart -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/baseline_shopping_cart_24"
+            android:title="Shopping Cart" />
+    </group>
+
+    <!-- Profile -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/baseline_account_circle_24"
+            android:title="Profile" />
+    </group>
+
+    <!-- Favorites -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_favorites"
+            android:icon="@drawable/baseline_favorite_24"
+            android:title="Favorites" />
     </group>
 </menu>
