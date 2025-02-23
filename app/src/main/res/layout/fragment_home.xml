@@ -1,14 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- ScrollView for scrolling content -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home Fragement" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/bannerImagee"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/banner_imagee"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Recommended Products Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recommended Products"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+
+            <!-- Horizontal ScrollView for Products -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <!-- Product Items -->
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/product_mouse"
+                        android:scaleType="centerCrop"
+                        android:layout_marginStart="16dp" />
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/product_keyboard"
+                        android:scaleType="centerCrop"
+                        android:layout_marginStart="16dp" />
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/product_headset"
+                        android:scaleType="centerCrop"
+                        android:layout_marginStart="16dp" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Promotions Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Current Promotions"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+
+            <!-- Promotion Items -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/promo_discount"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/promo_flash_sale"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/promo_free_shipping"
+                    android:scaleType="centerCrop"
+                    android:layout_marginBottom="8dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>
